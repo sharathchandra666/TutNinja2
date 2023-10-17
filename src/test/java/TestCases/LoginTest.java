@@ -1,5 +1,6 @@
 package TestCases;
 
+import Base.Base;
 import PageObjects.HomePage;
 import PageObjects.LoginPage;
 import org.openqa.selenium.By;
@@ -17,23 +18,12 @@ import java.time.Duration;
 import static Utilites.util.EmailTimestamp;
 
 
-public class LoginTest {
+public class LoginTest extends Base {
     WebDriver driver;
 
     @BeforeMethod
     public void setup() {
-        String Broswer = "chrome";
-
-        if (Broswer.equalsIgnoreCase("chrome")) {
-            driver = new ChromeDriver();
-        } else if (Broswer.equalsIgnoreCase("edge")) {
-            driver = new EdgeDriver();
-        } else if (Broswer.equalsIgnoreCase("firefox")) {
-            driver = new FirefoxDriver();
-        }
-        driver.get("https://tutorialsninja.com/demo/");
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+         driver = Broswer_ev_setup("chrome");
 
     }
 
