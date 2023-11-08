@@ -17,6 +17,8 @@ public class HomePage {
     WebElement Myaccount;
     @FindBy(linkText = "Login")
     WebElement LoginOption;
+    @FindBy(linkText = "Register")
+    WebElement registerOption;
 
     //    **********************Action****************
     public void Click_Myaccount() {
@@ -25,6 +27,10 @@ public class HomePage {
 
     public void Click_Login() {
         LoginOption.click();
+    }
+    public void Click_register()
+    {
+        registerOption.click();
     }
 
 }
