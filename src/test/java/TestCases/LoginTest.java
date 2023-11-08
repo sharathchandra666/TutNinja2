@@ -36,7 +36,7 @@ public class LoginTest extends Base {
         loginPage.enterEmail("sharathchandra@gmail.com");
         loginPage.enterPassowrd("Security@#1");
         loginPage.LoginBTN();
-        Assert.assertFalse(driver.findElement(By.linkText("Edit your account information")).isDisplayed(), "not login corretly");
+        Assert.assertTrue(driver.findElement(By.linkText("Edit your account information")).isDisplayed(), "not login corretly");
 
 
     }
